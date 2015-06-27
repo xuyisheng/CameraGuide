@@ -32,6 +32,12 @@
             android:onClick="camera3"
             android:text="CUSTOM CAMERA"/>
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="camera4"
+            android:text="API DEMO CAMERA"/>
+
     </LinearLayout>
 
     <ImageView

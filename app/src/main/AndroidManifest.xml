@@ -25,6 +25,8 @@
 
         <activity android:name=".CustomCamera"/>
         <activity android:name=".CameraResult"/>
+        <activity android:name=".CameraPreviewInApiDemo"/>
+
     </application>
 
 </manifest>

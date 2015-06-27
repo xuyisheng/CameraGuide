@@ -171,8 +171,8 @@ public class CustomCamera extends Activity implements SurfaceHolder.Callback {
     }
 
     @Override
-    protected void onStart() {
-        super.onStart();
+    protected void onResume() {
+        super.onResume();
         if (this.checkCameraHardware(this) && (mCamera == null)) {
             mCamera = getCamera();
             if (mSurfaceHolder != null) {

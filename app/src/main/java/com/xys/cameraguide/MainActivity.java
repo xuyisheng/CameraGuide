@@ -48,6 +48,10 @@ public class MainActivity extends Activity {
         startActivity(new Intent(this, CustomCamera.class));
     }
 
+    public void camera4(View view) {
+        startActivity(new Intent(this, CameraPreviewInApiDemo.class));
+    }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
