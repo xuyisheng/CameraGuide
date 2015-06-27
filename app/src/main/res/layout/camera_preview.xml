@@ -29,11 +29,22 @@
             android:text="拍照"/>
     </LinearLayout>
 
-    <SurfaceView
-        android:id="@+id/sv_camera"
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/ll"
-        android:text="拍照区域"/>
+        android:layout_below="@id/ll">
+
+        <SurfaceView
+            android:id="@+id/sv_camera"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="拍照区域"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="center"
+            android:src="@drawable/demo"/>
+    </FrameLayout>
 
 </RelativeLayout>  
