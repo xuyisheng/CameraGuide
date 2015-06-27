@@ -57,6 +57,12 @@ public class CustomCamera extends Activity implements SurfaceHolder.Callback {
         mCameraPreview = (SurfaceView) findViewById(R.id.sv_camera);
         mSurfaceHolder = mCameraPreview.getHolder();
         mSurfaceHolder.addCallback(this);
+        mCameraPreview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCamera.autoFocus(null);
+            }
+        });
     }
 
     /**
