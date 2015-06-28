@@ -112,7 +112,9 @@ public class CustomCamera extends Activity implements SurfaceHolder.Callback {
         mCamera.autoFocus(new Camera.AutoFocusCallback() {
             @Override
             public void onAutoFocus(boolean success, Camera camera) {
-                mCamera.takePicture(null, null, mPictureCallback);
+                if (success) {
+                    mCamera.takePicture(null, null, mPictureCallback);
+                }
             }
         });
     }

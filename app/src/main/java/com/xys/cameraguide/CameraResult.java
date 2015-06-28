@@ -3,6 +3,7 @@ package com.xys.cameraguide;
 import android.app.Activity;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Matrix;
 import android.os.Bundle;
 import android.widget.ImageView;
 
@@ -27,6 +28,11 @@ public class CameraResult extends Activity {
         try {
             fis = new FileInputStream(path);
             bitmap = BitmapFactory.decodeStream(fis);
+            Matrix matrix = new Matrix();
+            matrix.setRotate(90);
+            bitmap = Bitmap.createBitmap(bitmap, 0, 0,
+                    bitmap.getWidth(), bitmap.getHeight(),
+                    matrix, true);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } finally {
